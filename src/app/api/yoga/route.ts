@@ -1,12 +1,12 @@
 import { NextResponse } from 'next/server';
-import { YogaActionSchema } from '@/types/yoga';
+import { YogaActionRequestSchema } from '@/types/yoga';
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
 
     // 1. 使用 Zod 驗證前端傳來的資料
-    const validated = YogaActionSchema.safeParse(body);
+    const validated = YogaActionRequestSchema.safeParse(body);
 
     if (!validated.success) {
       return NextResponse.json({ error: validated.error.format() }, { status: 400 });
