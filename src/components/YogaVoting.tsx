@@ -53,7 +53,7 @@ export default function YogaVoting() {
       
       {/* 資訊卡片 */}
       <div className="bg-blue-50 p-4 rounded-xl mb-6">
-        <p className="text-sm text-blue-600">哈囉，{profile.displayName}！</p>
+        <p className="text-sm text-blue-600">哈囉，{profile?.displayName}！</p>
         <p className="text-xs text-blue-400 mt-1">請選擇課程日期進行報名或取消</p>
       </div>
 

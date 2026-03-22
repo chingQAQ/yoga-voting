@@ -22,6 +22,7 @@ export function useLiff() {
             displayName: userProfile.displayName,
           });
         }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
 
         setError(err.message);
