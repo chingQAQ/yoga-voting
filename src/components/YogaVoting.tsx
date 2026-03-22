@@ -34,7 +34,7 @@ export default function YogaVoting() {
       const result = await res.json();
       
       if (result.success) {
-        setMessage(status === 'REGISTERED' ? '✅ 報名成功！' : '点 取消成功');
+        setMessage(status === 'REGISTERED' ? '✅ 報名成功！' : '取消成功');
       } else {
         setMessage(`❌ 失敗：${result.message || '發生未知錯誤'}`);
       }

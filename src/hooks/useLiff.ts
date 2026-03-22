@@ -28,7 +28,14 @@ export function useLiff() {
         setError(err.message);
       }
     };
+
     initLiff();
+
+    if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {
+      import('vconsole').then((VConsole) => {
+        new VConsole.default();
+      });
+    }
   }, []);
 
   return { profile, error, isReady: !!profile };
