@@ -1,0 +1,51 @@
+{
+    "files.associations": {
+        "*.scss": "scss",
+        "*.js": "javascript",
+        "*.jsx": "javascriptreact",
+        "*.ts": "typescript",
+        "*.tsx": "typescriptreact"
+    },
+    "eslint.codeActionsOnSave.mode": "problems",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // ✅ 啟用自動格式化
+    "eslint.format.enable": false,
+
+    // ✅ 儲存時執行的自動修復動作（不會讓 ESLint 修格式）
+    "editor.codeActionsOnSave": {
+        // "source.organizeImports": "explicit",
+        "source.fixAll.format": "explicit",
+        "source.fixAll.eslint": "never"
+    },
+
+    // ✅ ESLint 設定（只做語意錯誤提示，不主動修正格式）
+    "eslint.run": "onSave", // 可改 onSave，但不搭配 fixAll 就不會破壞格式
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+    // ✅ 每種語言格式化設定（統一使用 prettier）
+    "[javascript]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+    "[typescript]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "scss.lint.unknownAtRules": "ignore",
+    "tailwindCSS.experimental.configFile": "packages/tailwind-config/src/tailwind.config.ts",
+    "cSpell.words": [
+        "pinzap"
+    ],
+    "typescript.tsdk": "node_modules/typescript/lib"
+}
